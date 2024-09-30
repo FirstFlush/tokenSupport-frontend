@@ -2,25 +2,41 @@ import React, { useState } from 'react';
 import NavbarLink from './NavbarLink';
 import SearchBar from './SearchBar';
 import { COMPANY_NAME } from '../utils/constants';
+import './Navbar.css';
+
 
 const Navbar: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
 
-    return (
-        <nav className="bg-white shadow-md p-4">
-            <div className="container mx-auto">
-                {/* Top Row: Company Name */}
-                <div className="flex justify-between items-center">
-                    <NavbarLink href="/" name={COMPANY_NAME} isBold={true} />
+    const toggleMenu = () => {
+        setIsOpen(!isOpen);
+    };
 
-                    {/* Hamburger Menu Button (visible on small screens) */}
+    return (
+        <nav className="bg-header text-headerText shadow-md p-4">
+            <div className="container mx-auto">
+                <div className="flex justify-between items-center">
+                    <h1 className="text-2xl text-white tracking-wider">
+                        <NavbarLink href="/" name={COMPANY_NAME} isBold={true} />
+                    </h1>
+
                     <div className="md:hidden mr-4">
-                        <button onClick={() => setIsOpen(!isOpen)} className="focus:outline-none">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
-                            </svg>
-                        </button>
-                    </div>
+    <button 
+        onClick={toggleMenu} 
+        className="relative focus:outline-none group"
+    >
+        {/* Background Circle */}
+        <div className="absolute inset-0 bg-headerLight10 rounded-full scale-0 group-hover:scale-150 transition-transform duration-200 ease-in-out z-0"></div>
+        
+        {/* Hamburger Icon */}
+        <div className={`hamburger relative z-10 ${isOpen ? 'open' : ''}`}>
+            <span className="line top group-hover:bg-highlightLight10"></span>
+            <span className="line middle group-hover:bg-highlightLight10"></span>
+            <span className="line bottom group-hover:bg-highlightLight10"></span>
+        </div>
+    </button>
+</div>
+
                 </div>
 
                 {/* Bottom Row: Navbar Links and Search Bar */}
@@ -48,16 +64,22 @@ const Navbar: React.FC = () => {
 
                     {/* Mobile Search Bar */}
                     <div className="flex justify-center px-4 py-2">
-                        <input 
+                        <SearchBar className="w-full" />
+                        {/* <input 
                             type="text" 
                             placeholder="Search for causes..." 
                             className="w-full px-4 py-2 border rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                        />
+                        /> */}
                     </div>
                 </div>
             </div>
         </nav>
     );
-}
+};
 
 export default Navbar;
+
+
+
+
+
