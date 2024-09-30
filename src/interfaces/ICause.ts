@@ -9,6 +9,6 @@ export interface ICause {
     amountRaised: number;
     createdAt: string; // ISO 8601 string or Date
     completed: boolean;
-    imageUrl: string;
-    // imageUrls: string[];
+    // imageUrl: string;
+    imageUrls: string[];
   }

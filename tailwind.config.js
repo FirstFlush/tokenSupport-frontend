@@ -11,6 +11,7 @@ module.exports = {
         secondary: '#F3F4F6',
         text: '#1F2937',
         background: '#fafafa',
+        warning: "#ef4444"
       }
     },
   },

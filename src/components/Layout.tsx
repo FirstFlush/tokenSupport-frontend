@@ -1,20 +1,21 @@
-import React, { ReactNode } from 'react';
+// import React, { ReactNode } from 'react';
+import { Outlet } from 'react-router-dom';
 import Footer from './Footer';
 import Navbar from './Navbar';
 
 
-interface LayoutProps {
-  children: ReactNode;
-}
+// interface LayoutProps {
+//   children: ReactNode;
+// }
 
-const Layout: React.FC<LayoutProps> = ({ children }) => {
+const Layout: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <header>
         <Navbar />
       </header>
       <main className="container mx-auto flex-grow p-4">
-        {children}
+        <Outlet />
       </main>
       <footer>
         <Footer />

@@ -1,16 +1,15 @@
-import Layout from "../components/Layout";
+
 
 
 const HomePage: React.FC = () => {
 
 
     return (
-        <Layout>
+
             
-            Home page
+            <div>Home page</div>
 
 
-        </Layout>
     )
 
 }

@@ -1,21 +1,25 @@
 import React from 'react';
 import CauseIndexPage from './pages/CauseIndexPage';
 import CauseDetailPage from './pages/CauseDetailPage';
+import FundraisePage from './pages/FundraisePage';
 import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Layout from './components/Layout';
 
 
 const App:React.FC = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<HomePage />}></Route>
-        <Route path="/causes" element={<CauseIndexPage />}></Route>
-        <Route path="/causes/:id" element={<CauseDetailPage />}></Route>
+        <Route element={<Layout />}>
+          <Route path="/" element={<HomePage />}></Route>
+          <Route path="/fundraise" element={<FundraisePage />}></Route>
+          <Route path="/causes" element={<CauseIndexPage />}></Route>
+          <Route path="/causes/:id" element={<CauseDetailPage />}></Route>
+          <Route path="/about" element={<AboutPage />}></Route>
+        </Route>
       </Routes>
-      {/* <Layout>
-
-      </Layout> */}
     </Router>
   );
 };

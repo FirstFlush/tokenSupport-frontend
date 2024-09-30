@@ -6,5 +6,5 @@ export interface ICauseOverview {
     amountRaised: number;
     createdAt: string; // ISO 8601 string or Date
     completed: boolean;
-    imageUrl: string;
+    primaryImageUrl: string;
   }

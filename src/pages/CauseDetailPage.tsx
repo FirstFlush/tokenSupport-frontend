@@ -1,7 +1,6 @@
 import { useParams } from 'react-router-dom';
 import { ICause } from '../interfaces/ICause';
 import { useState, useEffect } from 'react';
-import Layout from '../components/Layout';
 import { fakeCauses } from '../data/fakeCauses';
 
 
@@ -34,7 +33,7 @@ const CauseDetailPage: React.FC = () => {
     }
 
     return (
-        <Layout>
+        // <Layout>
         <div className="container mx-auto py-10 px-4">
             <div className="text-center mb-10">
                 <h1 className="text-4xl font-bold text-primary">{cause.title}</h1>
@@ -44,8 +43,8 @@ const CauseDetailPage: React.FC = () => {
             </div>
 
             {/* Image Gallery */}
-            {/* <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-                {cause.imageUrl.map((url, index) => (
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                {cause.imageUrls.map((url, index) => (
                     <img
                         key={index}
                         src={url}
@@ -53,7 +52,7 @@ const CauseDetailPage: React.FC = () => {
                         className="w-full h-80 object-cover rounded-lg shadow-md"
                     />
                 ))}
-            </div> */}
+            </div>
 
             {/* Cause Details */}
             <div className="bg-white p-6 rounded-lg shadow-md">
@@ -68,7 +67,7 @@ const CauseDetailPage: React.FC = () => {
                     ></div>
                     <div className="absolute inset-0 flex justify-center items-center">
                         <p className="text-text text-lg ">
-                            {Math.round((cause.amountRaised / cause.amountGoal) * 100)}% funded
+                            {Math.round((cause.amountRaised / cause.amountGoal) * 100)}%
                         </p>
                     </div>
                 </div>
@@ -98,7 +97,7 @@ const CauseDetailPage: React.FC = () => {
                 </div>
             </div>
         </div>
-        </Layout>
+        // </Layout>
     );
 };
 

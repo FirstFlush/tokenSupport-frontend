@@ -1,20 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 import { ICauseOverview } from "../interfaces/ICauseOverview";
 
 
@@ -30,7 +13,7 @@ const CauseOverview:React.FC<CauseProps> = ({ cause }) => {
     return (
 
         <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white">
-            <img className="w-full h-48 object-cover object-center" src={cause.imageUrl} alt={cause.title} />
+            <img className="w-full h-48 object-cover object-center" src={cause.primaryImageUrl} alt={cause.title} />
             <div className="px-6 py-4">
                 <div className="text-text font-bold text-xl mb-2">
                     {cause.title}
