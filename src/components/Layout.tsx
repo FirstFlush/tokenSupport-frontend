@@ -17,9 +17,9 @@ const Layout: React.FC = () => {
       <main className="container mx-auto flex-grow p-4">
         <Outlet />
       </main>
-      <footer>
+      {/* <footer> */}
         <Footer />
-      </footer>
+      {/* </footer> */}
     </div>
   );
 };
