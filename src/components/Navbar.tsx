@@ -4,7 +4,6 @@ import SearchBar from './SearchBar';
 import { COMPANY_NAME } from '../utils/constants';
 import './Navbar.css';
 
-
 const Navbar: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
 
@@ -12,13 +11,16 @@ const Navbar: React.FC = () => {
         setIsOpen(!isOpen);
     };
 
+    const closeMenu = () => {
+        setIsOpen(false); // This will close the menu
+    };
+
     return (
-        
         <nav className="fixed top-0 left-0 w-full z-50 bg-header text-headerText shadow-md py-4 px-1 sm:px-4">
             <div className="container mx-auto">
                 <div className="flex justify-between items-center">
                     <h1 className="text-2xl text-white tracking-widest">
-                        <NavbarLink href="/" name={COMPANY_NAME} isBold={true} />
+                        <NavbarLink href="/" name={COMPANY_NAME} isBold={true} onClick={closeMenu} />
                     </h1>
 
                     <div className="md:hidden pr-4">
@@ -58,19 +60,14 @@ const Navbar: React.FC = () => {
                 {/* Mobile Menu (collapsible) */}
                 <div className={`${isOpen ? 'block' : 'hidden'} md:hidden`}>
                     <div className="flex flex-col space-y-4 px-4 py-2">
-                        <NavbarLink href="/causes" name="Causes" />
-                        <NavbarLink href="/fundraise" name="Fundraise" />
-                        <NavbarLink href="/about" name="About" />
+                        <NavbarLink href="/causes" name="Causes" onClick={closeMenu} />
+                        <NavbarLink href="/fundraise" name="Fundraise" onClick={closeMenu} />
+                        <NavbarLink href="/about" name="About" onClick={closeMenu} />
                     </div>
 
                     {/* Mobile Search Bar */}
                     <div className="flex justify-center px-4 py-2">
                         <SearchBar className="w-full" />
-                        {/* <input 
-                            type="text" 
-                            placeholder="Search for causes..." 
-                            className="w-full px-4 py-2 border rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                        /> */}
                     </div>
                 </div>
             </div>
@@ -79,8 +76,3 @@ const Navbar: React.FC = () => {
 };
 
 export default Navbar;
-
-
-
-
-

@@ -92,7 +92,7 @@ const CauseDetailPage: React.FC = () => {
                         <strong>Email:</strong> {cause.email}
                     </p>
                     <p className="text-gray-600">
-                        <strong>Wallet:</strong> {cause.wallet}
+                        <strong>Wallet:</strong> <span className="text-xs">{cause.wallet}</span>
                     </p>
                 </div>
             </div>
