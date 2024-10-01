@@ -29,13 +29,13 @@ export const fakeCauses = [
     },
     {
       "id": 3,
-      "creator": "assman69",
+      "creator": "Ronald McDonald",
       "wallet": "0x7890abcdef1234567890abcdef1234567890abcd",
       "title": "Education for Underprivileged Kids",
       "email": "education_guy@yahoo.co.uk",
       "description": "Provide educational resources and scholarships for underprivileged kids.",
       "amountGoal": 20.0,  // In Ether (ETH)
-      "amountRaised": 20.0, // In Ether (ETH)
+      "amountRaised": 20.0, // In Ether (ETH)q
       "createdAt": "2024-06-30T08:00:00Z", // ISO 8601 date format
       "completed": true,
       "imageUrls": ["https://randomwordgenerator.com/img/picture-generator/54e8d54a4355aa14f1dc8460962e33791c3ad6e04e507441722973d49f4bc4_640.jpg"],

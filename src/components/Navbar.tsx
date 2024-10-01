@@ -13,29 +13,30 @@ const Navbar: React.FC = () => {
     };
 
     return (
-        <nav className="bg-header text-headerText shadow-md p-4">
+        
+        <nav className="fixed top-0 left-0 w-full z-50 bg-header text-headerText shadow-md py-4 px-1 sm:px-4">
             <div className="container mx-auto">
                 <div className="flex justify-between items-center">
                     <h1 className="text-2xl text-white tracking-widest">
                         <NavbarLink href="/" name={COMPANY_NAME} isBold={true} />
                     </h1>
 
-                    <div className="md:hidden mr-4">
-    <button 
-        onClick={toggleMenu} 
-        className="relative focus:outline-none group"
-    >
-        {/* Background Circle */}
-        <div className="absolute inset-0 bg-headerLight10 rounded-full scale-0 group-hover:scale-150 transition-transform duration-200 ease-in-out z-0"></div>
-        
-        {/* Hamburger Icon */}
-        <div className={`hamburger relative z-10 ${isOpen ? 'open' : ''}`}>
-            <span className="line top group-hover:bg-highlightLight10"></span>
-            <span className="line middle group-hover:bg-highlightLight10"></span>
-            <span className="line bottom group-hover:bg-highlightLight10"></span>
-        </div>
-    </button>
-</div>
+                    <div className="md:hidden pr-4">
+                        <button 
+                            onClick={toggleMenu} 
+                            className="relative focus:outline-none group"
+                        >
+                            {/* Background Circle */}
+                            <div className="absolute inset-0 bg-headerLight10 rounded-full scale-0 group-hover:scale-150 transition-transform duration-200 ease-in-out z-0"></div>
+                            
+                            {/* Hamburger Icon */}
+                            <div className={`hamburger relative z-10 ${isOpen ? 'open' : ''}`}>
+                                <span className="line top group-hover:bg-highlightLight10"></span>
+                                <span className="line middle group-hover:bg-highlightLight10"></span>
+                                <span className="line bottom group-hover:bg-highlightLight10"></span>
+                            </div>
+                        </button>
+                    </div>
 
                 </div>
 

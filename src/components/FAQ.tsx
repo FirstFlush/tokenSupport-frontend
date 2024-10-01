@@ -4,7 +4,7 @@ import { fakeFaqItems } from '../data/fakeFAQ'; // Assuming you have a file to s
 
 const FAQ: React.FC = () => {
   return (
-    <section className="container mx-auto py-10 px-4">
+    <section className="container mx-auto py-10">
       <h2 className="text-3xl font-bold text-center mb-8 text-primary">Frequently Asked Questions</h2>
       <Accordion items={fakeFaqItems} />
     </section>

@@ -5,7 +5,8 @@
 
 body {
   color: #1F2937;
-  background: #FAFAFA;
+  background-color: #111827;
+  /* background: #FAFAFA; */
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -15,8 +16,17 @@ body {
   box-sizing: border-box;
 }
 
-input {
-  background-color: #EEE;
+.body {
+  background-color: #FAFAFA;
+  margin-top: 144px /* The height of the navbar */
+}
+
+select {
+  background-color: #FAFAFA !important;
+}
+
+.select-wrapper label {
+  background-color: #FAFAFA !important;
 }
 
 code {

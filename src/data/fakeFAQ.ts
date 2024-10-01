@@ -20,11 +20,11 @@ export const fakeFaqItems = [
       title: 'Can I trust decentralized fundraising?',
       content: `Yes, decentralized fundraising is built on blockchain technology, which provides a high level of trust and security. This is achieved through the use of smart contracts.
 
-      **Smart contracts**: These are self-executing contracts with the terms of the agreement directly written into code. They automatically execute actions (like releasing funds) when specific conditions are met, without the need for an intermediary.
+      - **Smart contracts**: These are self-executing contracts with the terms of the agreement directly written into code. They automatically execute actions (like releasing funds) when specific conditions are met, without the need for an intermediary.
 
-      **Immutability**: Once a smart contract is deployed on the blockchain, it cannot be altered or tampered with. This immutability ensures that the rules of the fundraising campaign are transparent and cannot be changed after the fact.
+      - **Immutability**: Once a smart contract is deployed on the blockchain, it cannot be altered or tampered with. This immutability ensures that the rules of the fundraising campaign are transparent and cannot be changed after the fact.
 
-      **Open-source code**: Smart contracts used for decentralized fundraising are typically open-source, meaning anyone can review the code to ensure it behaves as expected. This openness provides additional trust for users who may be wary of fraudulent platforms.`
+      - **Open-source code**: Smart contracts used for decentralized fundraising are typically open-source, meaning anyone can review the code to ensure it behaves as expected. This openness provides additional trust for users who may be wary of fraudulent platforms.`
   },
   {
       title: "Doesn't Ethereum's gas fees make this expensive?",

@@ -14,9 +14,11 @@ const Layout: React.FC = () => {
       <header>
         <Navbar />
       </header>
-      <main className="container mx-auto flex-grow p-4">
-        <Outlet />
-      </main>
+      <div className="body">
+        <main className="container w-100vw mx-auto flex-grow py-4 px-2 sm:px-4">
+          <Outlet />
+        </main>
+      </div>
       {/* <footer> */}
         <Footer />
       {/* </footer> */}

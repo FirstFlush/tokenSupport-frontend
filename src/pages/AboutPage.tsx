@@ -1,13 +1,12 @@
 import { COMPANY_NAME } from "../utils/constants";
 import FAQ from "../components/FAQ";
-import { fakeFaqItems } from "../data/fakeFAQ";
 
 
 const AboutPage: React.FC = () => {
 
   return (
     <div>
-      <div className="relative min-h-screen bg-gradient-to-br from-gray-100 to-gray-300 py-12 px-6">
+      <div className="relative min-h-screen bg-gradient-to-br from-gray-100 to-gray-300 py-12 px-3 sm:px-6">
         <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-8">
           <h1 className="text-4xl font-bold text-primary mb-6">About {COMPANY_NAME}</h1>
           <p className="text-lg text-gray-700 leading-relaxed mb-4">

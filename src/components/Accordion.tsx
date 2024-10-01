@@ -16,12 +16,12 @@ const Accordion: React.FC<AccordionProps> = ({ items }) => {
       setActiveIndex(null); // Close the currently open accordion
       setTimeout(() => {
         setActiveIndex(index); // Open the new accordion after a short delay
-      }, 300); // Delay to match the closing animation duration (300ms)
+      }, 500); // Delay to match the closing animation duration (300ms)
     }
   };
 
   return (
-    <div className="bg-headerLight20 rounded-lg overflow-hidden border border-gray-600">
+    <div className="bg-headerLight5 rounded-lg overflow-hidden border border-gray-600">
       {items.map((item, index) => (
         <AccordionItem
           key={index}
@@ -30,7 +30,7 @@ const Accordion: React.FC<AccordionProps> = ({ items }) => {
           isOpen={activeIndex === index} // Check if the current index matches the active one
           onToggle={() => handleToggle(index)} // Handle open/close with the delay
           headerClassName='bg-header text-white'
-          bodyClassName='bg-headerLight10'
+          bodyClassName='bg-headerLight5'
         />
       ))}
     </div>

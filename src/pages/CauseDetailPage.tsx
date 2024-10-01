@@ -34,7 +34,7 @@ const CauseDetailPage: React.FC = () => {
 
     return (
         // <Layout>
-        <div className="container mx-auto py-10 px-4">
+        <div className="container mx-auto py-10 px-2 sm:px-4">
             <div className="text-center mb-10">
                 <h1 className="text-4xl font-bold text-primary">{cause.title}</h1>
                 <p className="text-text text-sm mt-2">

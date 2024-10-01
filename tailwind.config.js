@@ -18,6 +18,7 @@ module.exports = {
         background: '#fafafa',
         warning: "#ef4444",
         header: '#111827',
+        headerLight5: '#192339',
         headerLight10: '#202d4a',
         headerLight20: '#2f436d',
         headerText: '#8f96a2',

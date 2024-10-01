@@ -14,7 +14,7 @@ const Select: React.FC<SelectProps> = ({ label, id, name, value, onChange, class
   const [isFocused, setIsFocused] = useState(false);
 
   return (
-    <div className={`relative w-full ${className}`}>
+    <div className={`select-wrapper relative w-full ${className}`}>
       <select
         className={`shadow-md w-full px-4 py-4 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-secondary bg-transparent appearance-none peer`}
         id={id}
@@ -33,7 +33,7 @@ const Select: React.FC<SelectProps> = ({ label, id, name, value, onChange, class
       </select>
       <label
         htmlFor={id}
-        className={`cursor-text absolute left-4 text-gray-600 transition-all duration-200 ease-in-out ${isFocused || value ? '-top-2.5 text-xs' : 'top-4 text-base'} bg-white px-1`}
+        className={`cursor-text absolute select-none left-4 text-gray-600 transition-all duration-200 ease-in-out ${isFocused || value ? '-top-2.5 text-xs' : 'top-4 text-base'} bg-white px-1`}
       >
         {label}
       </label>

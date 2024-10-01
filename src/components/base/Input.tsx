@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 
 // Define valid input types
-type InputType = "text" | "number" | "email" | "password" | "tel" | "url" | "search" | "date";
+// type InputType = "text" | "number" | "email" | "password" | "tel" | "url" | "search" | "date" | "hidden" | "color" | "button" | "checkbox" | "datetime-local" | "file" | "image" | "month" | "radio" | "range" | "reset" | "submit" | "time" | "week";
+type InputType = React.HTMLInputTypeAttribute;
 
-interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+
+export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   label: string;
   id: string;
   name: string;
@@ -31,7 +33,7 @@ const Input: React.FC<InputProps> = ({ label, id, name, value, onChange, classNa
       />
       <label
         htmlFor={id}
-        className={`cursor-text absolute left-4 text-gray-600 transition-all duration-200 ease-in-out ${
+        className={`cursor-text absolute select-none left-4 text-gray-600 transition-all duration-200 ease-in-out ${
           isFocused || value ? '-top-2.5 text-xs' : 'top-4 text-base'
         } bg-white px-1`}
       >
