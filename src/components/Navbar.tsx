@@ -16,7 +16,7 @@ const Navbar: React.FC = () => {
         <nav className="bg-header text-headerText shadow-md p-4">
             <div className="container mx-auto">
                 <div className="flex justify-between items-center">
-                    <h1 className="text-2xl text-white tracking-wider">
+                    <h1 className="text-2xl text-white tracking-widest">
                         <NavbarLink href="/" name={COMPANY_NAME} isBold={true} />
                     </h1>
 

@@ -31,7 +31,7 @@
 
 .hamburger.open .top {
     transform: rotate(45deg);
-    top: 50%;
+    top: 45%;
 }
 
 .hamburger.open .middle {

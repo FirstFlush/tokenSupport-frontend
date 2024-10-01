@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
           
           {/* Left Section: Company Info */}
           <div className="flex-1 pr-4">
-            <h2 className="text-2xl font-bold mb-4">{COMPANY_NAME}</h2>
+            <h2 className="text-2xl tracking-widest font-bold mb-4">{COMPANY_NAME}</h2>
             <p className="text-headerText">
               Empowering fundraisers through decentralized finance. All transactions are executed securely and efficiently on the Polygon network.
             </p>

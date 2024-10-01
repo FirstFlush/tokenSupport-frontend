@@ -21,8 +21,11 @@ module.exports = {
         headerLight10: '#202d4a',
         headerLight20: '#2f436d',
         headerText: '#8f96a2',
+      },
+      letterSpacing: {
+        widest: '0.2em',
       }
-    },
+    }
   },
   plugins: [],
 }
